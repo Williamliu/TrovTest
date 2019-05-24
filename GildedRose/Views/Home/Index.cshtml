@@ -1,0 +1,38 @@
+﻿@section Scripts {
+    <script>
+        var Store = new TROV.Store();
+        var app = angular.module("trovApp", ["TrovComponents"]);
+
+        app.controller("trovContrl", function ($scope) {
+            Store.SetScope($scope);
+        });
+
+        $(function () {
+            Store.GetItem();
+        });
+    </script>
+}
+<div style="margin-top:20px;">
+    <h3>Welcome to Gilded Rose Fine Store</h3>
+</div>
+<div ng-app="trovApp" ng-controller="trovContrl" style="margin-top:20px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <trov.customer store="Store"></trov.customer>
+            <trov.error store="Store"></trov.error>
+        </div>
+    </div>
+    <div class="row" style="margin-top:40px;">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <trov.products store="Store"></trov.products>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <trov.cart store="Store"></trov.cart>
+        </div>
+    </div>
+    <div class="row" style="margin-top:40px;">
+        <div class="col-lg-12">
+            <trov.history store="Store"></trov.history>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿body {
+    padding:    0px;
+    margin:     0px;
+    font-size:  18px;
+    font-family: sans-serif, Arial, 'Times New Roman', Times, serif;
+}
+span.error {
+    color: red;
+}
+
+a.button.cart {
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align:middle;
+    background:center center url(Images/shopping-cart.png) no-repeat; 
+}
